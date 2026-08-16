@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-fredoka: 'Fredoka', cursive, sans-serif;
+    --font-caveat: 'Caveat', cursive;
+    --font-comfortaa: 'Comfortaa', cursive, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-fredoka);
+    background-color: #FFF5F7;
+    overflow-x: hidden;
+  }
+}
+
+.font-cute {
+  font-family: 'Fredoka', cursive, sans-serif;
+}
+
+.font-handwriting {
+  font-family: 'Caveat', cursive;
+}
+
+.font-comfortaa {
+  font-family: 'Comfortaa', cursive, sans-serif;
+}
+
+.font-body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Custom Soft Pastel Pattern Background */
+.bg-kitty-pattern {
+  background-color: #FFF6F8;
+  background-image: 
+    radial-gradient(#FDCAD6 1px, transparent 1px),
+    radial-gradient(#FFE4EC 1px, #FFF6F8 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+.bg-gingham-pink {
+  background-color: #ffffff;
+  background-image: 
+    linear-gradient(90deg, rgba(255, 182, 193, 0.25) 50%, transparent 50%),
+    linear-gradient(rgba(255, 182, 193, 0.25) 50%, transparent 50%);
+  background-size: 24px 24px;
+}
+
+.bg-polka-pink {
+  background-color: #FFF0F5;
+  background-image: radial-gradient(#FFB6C1 1.5px, transparent 1.5px);
+  background-size: 18px 18px;
+}
+
+/* Custom Animations */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.02);
+  }
+}
+
+@keyframes sparkleTwinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(0.6) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(45deg);
+  }
+}
+
+@keyframes heartBeatCute {
+  0%, 100% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.15);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.15);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.animate-float-gentle {
+  animation: floatGentle 3s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkleTwinkle 2.5s ease-in-out infinite;
+}
+
+.animate-heartbeat {
+  animation: heartBeatCute 2s ease-in-out infinite;
+}
+
+/* Glassmorphism for cute cards */
+.glass-kitty {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 218, 228, 0.9);
+}
+
+.glass-kitty-pink {
+  background: rgba(255, 240, 245, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 192, 208, 0.8);
+}
+
+/* Custom cute scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF0F4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFB3C6;
+  border-radius: 9999px;
+  border: 2px solid #FFF0F4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF85A2;
+}
+
